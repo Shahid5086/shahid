@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Watches - Explore Collection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6b35;
+        }
+        .explore-hero {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('./first\ name\ \(2\).jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .explore-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            animation: heroFloat 4s ease-in-out infinite;
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-20px) rotateX(5deg); }
+        }
+        .explore-hero h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .explore-hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #fff;
+        }
+        .filters {
+            padding: 20px 50px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .filters button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background: #ff6b35;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .filters button:hover {
+            background: #e55a2b;
+            transform: scale(1.1);
+        }
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px;
+        }
+        .collection-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            animation: itemFloat 3s ease-in-out infinite;
+        }
+        @keyframes itemFloat {
+            0%, 100% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-10px) rotateX(2deg); }
+        }
+        .collection-item:hover {
+            transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+            box-shadow: 0 16px 64px rgba(0,0,0,0.4);
+        }
+        .item-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.5s ease;
+        }
+        .collection-item:hover .item-image {
+            transform: scale(1.1) rotateZ(5deg);
+        }
+        .watch1 { background-image: url('./real.jpg');  }
+        .watch2 { background-image: url('./real.jpg'); }
+        .watch3 { background-image: url('./real.jpg'); }
+        .watch4 { background-image: url('./real.jpg'); }
+        .watch5 { background-image: url('./real.jpg'); }
+        .watch6 { background-image: url('./real.jpg'); }
+        .watch7 { background-image: url('./real.jpg'); }
+        .watch8 { background-image: url('./3watch.jpg'); }
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        .view-details {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6b35;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .view-details:hover {
+            background: #e55a2b;
+            transform: scale(1.1);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Luxe Watches</div>
+        <nav>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/Untitled-1.html?serverWindowId=f9fbe2e1-e964-4bde-8ddc-70aeeddefd37">Home</a>
+            
+        </nav>
+    </header>
+    
+    <section class="explore-hero">
+        <div class="hero-content">
+            <h1>Explore Our Collection</h1>
+            <p>Dive into a world of timeless elegance and precision craftsmanship.</p>
+        </div>
+    </section>
+    
+   
+    
+    <section class="collection-grid">
+        <div class="collection-item">
+            <div class="item-image watch1"></div>
+            <h3>Classic Chronograph</h3>
+            <p>A sophisticated chronograph with stainless steel case and leather strap.</p>
+            <div class="price">$299</div>
+            <a href="https://www.hublot.com/en-int/find-your-hublot/classic-fusion/chronograph" class="view-details">View Details</a>
+        </div>
+        <div class="collection-item">
+            <div class="item-image watch2"></div>
+            <h3>Elegant Dress Watch</h3>
+            <p>Timeless design with a minimalist dial and automatic movement.</p>
+            <div class="price">$399</div>
+            <a href="https://www.hublot.com/en-int/find-your-hublot/classic-fusion/chronograph" class="view-details">View Details</a>
+        </div>
+        <div class="collection-item">
+            <div class="item-image watch3"></div>
+            <h3>Sport Diver</h3>
+            <p>Rugged and reliable, with luminous markers and a ceramic bezel.</p>
+            <div class="price">$249</div>
+            <a href="https://www.hublot.com/en-int/find-your-hublot/classic-fusion/chronograph" class="view-details">View Details</a>
+        </div>
+        <div class="collection-item">
+            <div class="item-image watch4"></div>
+            <h3>Luxury Automatic</h3>
+            <p>High-end automatic watch with sapphire crystal and gold accents.</p>
+            <div class="price">$599</div>
+            <a href="https://www.hublot.com/en-int/find-your-hublot/classic-fusion/chronograph" class="view-details">View Details</a>
+        </div>
+        <div class="collection-item">
+            <div class="item-image watch5"></div>
+            <h3>Vintage Style</h3>
+            <p>Retro-inspired watch with enamel dial and leather band.</p>
+            <div class="price">$349</div>
+            <a href="https://www.hublot.com/en-int/find-your-hublot/classic-fusion/chronograph" class="view-details">View Details</a>
+        </div>
+        <div class="collection-item">
+            <div class="item-image watch6"></div>
+            <h3>Smart Hybrid</h3>
+            <p>Blend of tradition and technology with smart features.</p>
+            <div class="price">$499</div>
+            <a href="https://www.hublot.com/en-int/find-your-hublot/classic-fusion/chronograph" class="view-details">View Details</a>
+        </div>
+        <div class="collection-item">
+            <div class="item-image watch7"></div>
+            <h3>Adventure Seeker</h3>
+            <p>Built for the outdoors with durable materials and GPS tracking.</p>
+            <div class="price">$449</div>
+            <a href="https://i-watch.co/en-fr/products/hdc-700-1avdf#:~:text=This%20watch%20combines%20a%20sporty,Approximately%2010%20years%20on%20CR2025" class="view-details">View Details</a>
+        </div>
+       
+    </section>
+    
+    <footer>
+        <p> 2025 Luxe Watches. All rights reserved.</p>
+    </footer>
+</body>
+</html>

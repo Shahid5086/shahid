@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Watches - About Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6b35;
+        }
+        .about-hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('./2image.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            animation: heroFloat 4s ease-in-out infinite;
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-20px) rotateX(5deg); }
+        }
+        .about-hero h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .about-hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+        .story-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 50px auto;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            animation: cardFloat 3s ease-in-out infinite;
+        }
+        @keyframes cardFloat {
+            0%, 100% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-10px) rotateX(2deg); }
+        }
+        .story-card:hover {
+            transform: rotateY(5deg) rotateX(5deg) scale(1.02);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .team-member {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        .team-member:hover {
+            transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+        }
+        .team-image {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            border: 3px solid #fff;
+        }
+        .member1 { background-image: url('./first\ name\ \(3\).jpg'); }
+        .member2 { background-image: url('./first\ name\ \(2\).jpg'); }
+        .member3 { background-image: url('./first\ name\ \(1\).JPG'); }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Luxe Watches</div>
+       <nav>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/Untitled-1.html?serverWindowId=f9fbe2e1-e964-4bde-8ddc-70aeeddefd37">Home</a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/Untitled-2.html?serverWindowId=ea8f23fc-6527-426a-86af-874ecdefd0d6">Shop</a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/about page.html?serverWindowId=ea8f23fc-6527-426a-86af-874ecdefd0d6">About</a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/contect.html?serverWindowId=bcfba1dc-e0c7-4bc1-ad67-df347b32ec3e">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>About Luxe Watches</h1>
+            <p>Crafting timeless elegance since 1995.</p>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="story-card">
+            <h2>Our Story</h2>
+            <p>Founded in 1995, Luxe Watches has been dedicated to blending traditional craftsmanship with modern innovation. Our passion for precision and style drives us to create watches that are not just accessories, but heirlooms. From the bustling streets of New York to international markets, we strive to deliver luxury that stands the test of time.</p>
+        </div>
+        
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-image member1"></div>
+                <h3>Meer Amir</h3>
+                <p>Founder & CEO</p>
+                <p>With over 20 years in the industry, Amir leads our vision for excellence.</p>
+            </div>
+            <div class="team-member">
+                <div class="team-image member2"></div>
+                <h3>Shahid Bilal</h3>
+                <p>Head Designer</p>
+                <p> innovative designs bring our watches to life with unparalleled style.</p>
+            </div>
+            <div class="team-member">
+                <div class="team-image member3"></div>
+                <h3>Owais Qayoom</h3>
+                <p>Master Craftsman</p>
+                <p>Mike ensures every watch meets our rigorous standards of quality.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p> 2025 Luxe Watches. All rights reserved.</p>
+    </footer>
+</body>
+</html>

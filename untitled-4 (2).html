@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Luxe Watches</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateZ(0); /* Enable 3D context */
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeInUp 1s ease-out;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .contact-form, .contact-info {
+            flex: 1;
+            min-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d; /* Enable 3D for children */
+        }
+        .contact-form {
+            animation: slideInLeft 1.5s ease-out;
+        }
+        .contact-info {
+            animation: slideInRight 1.5s ease-out;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+        button {
+            padding: 10px;
+            background: #ffd700;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .watch-3d {
+            position: fixed;
+            top: 50%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: url('https://via.placeholder.com/200x200?text=Watch') no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            transform: rotateY(0deg);
+            animation: rotate3D 5s infinite linear;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .floating-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+            animation: float 10s infinite ease-in-out;
+            z-index: -1;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes rotate3D {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6b35;
+        }
+    </style>
+</head>
+<body>
+   
+       <nav>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/Untitled-1.html?serverWindowId=f9fbe2e1-e964-4bde-8ddc-70aeeddefd37">Home</a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/Untitled-2.html?serverWindowId=ea8f23fc-6527-426a-86af-874ecdefd0d6">Shop</a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/about page.html?serverWindowId=ea8f23fc-6527-426a-86af-874ecdefd0d6">About</a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/contect.html?serverWindowId=68c661d2-7751-4102-a1a4-283349eeba7e">Contact</a>
+        </nav>
+    <div class="floating-bg"></div>
+    <div class="watch-3d"></div>
+    <header>
+        <h1>Contact Luxe Watches</h1>
+        <p>Get in touch for inquiries about our exquisite timepieces.</p>
+    </header>
+    <div class="container">
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Our Details</h2>
+            <p><strong>Address:</strong> 123 Luxury Lane, Geneva, Switzerland</p>
+            <p><strong>Phone:</strong> +41 123 456 789</p>
+            <p><strong>Email:</strong> info@luxewatches.com</p>
+            <p><strong>Hours:</strong> Mon-Fri 9AM-6PM</p>
+        </div>
+    </div>
+    <footer>
+        <p>  2025 Luxe Watches. All rights reserved.</p>
+    </footer>
+    <script>
+        // Simple JS for form submission (placeholder - replace with real backend)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you soon.');
+        });
+    </script>
+</body>
+</html>

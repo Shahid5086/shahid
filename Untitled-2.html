@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Watches - Store</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6b35;
+        }
+        .store-section {
+            padding: 120px 50px 50px;
+            text-align: center;
+        }
+        .store-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .product-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            animation: cardFloat 3s ease-in-out infinite;
+        }
+        @keyframes cardFloat {
+            0%, 100% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-10px) rotateX(2deg); }
+        }
+        .product-card:hover {
+            transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+            box-shadow: 0 16px 64px rgba(0,0,0,0.4);
+        }
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.1) rotateZ(5deg);
+        }
+        .watch1 { background-image: url('./real.jpg'); }
+        .watch2 { background-image: url('./real.jpg'); }
+        .watch3 { background-image: url('./real.jpg'); }
+        .watch4 { background-image: url('./real.jpg'); }
+        .watch5 { background-image: url('./real.jpg'); }
+        .watch6 { background-image: url('./real.jpg'); }
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        .add-to-cart {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6b35;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .add-to-cart:hover {
+            background: #e55a2b;
+            transform: scale(1.1);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Luxe Watches</div>
+        <nav>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/Untitled-1.html?serverWindowId=f9fbe2e1-e964-4bde-8ddc-70aeeddefd37">Home</a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/Untitled-2.html?serverWindowId=60ab8169-79a7-4d9d-976a-f957c0496817">Shop </a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/about page.html?serverWindowId=ea8f23fc-6527-426a-86af-874ecdefd0d6">About</a>
+            <a href="http://127.0.0.1:3000/c:/Users/dell/OneDrive/Desktop/website5/website number 2/watch store website/contect.html?serverWindowId=bcfba1dc-e0c7-4bc1-ad67-df347b32ec3e">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="store-section">
+        <h1>Our Store</h1>
+        <p>Explore our collection of premium watches.</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image watch1"></div>
+                <h3>Classic Chronograph</h3>
+                <p>A sophisticated chronograph with stainless steel case and leather strap.</p>
+                <div class="price">$299</div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <div class="product-image watch2"></div>
+                <h3>Elegant Dress Watch</h3>
+                <p>Timeless design with a minimalist dial and automatic movement.</p>
+                <div class="price">$399</div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <div class="product-image watch3"></div>
+                <h3>Sport Diver</h3>
+                <p>Rugged and reliable, with luminous markers and a ceramic bezel.</p>
+                <div class="price">$249</div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <div class="product-image watch4"></div>
+                <h3>Luxury Automatic</h3>
+                <p>High-end automatic watch with sapphire crystal and gold accents.</p>
+                <div class="price">$599</div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <div class="product-image watch5"></div>
+                <h3>Vintage Style</h3>
+                <p>Retro-inspired watch with enamel dial and leather band.</p>
+                <div class="price">$349</div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <div class="product-image watch6"></div>
+                <h3>Smart Hybrid</h3>
+                <p>Blend of tradition and technology with smart features.</p>
+                <div class="price">$499</div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p> 2025 Luxe Watches. All rights reserved.</p>
+    </footer>
+</body>
+</html>
